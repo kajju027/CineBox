@@ -1,0 +1,910 @@
+
+
+
+
+
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;JOIN FILMYMAD &lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;&gt;
+
+  
+    &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+  &lt;style&gt;
+      #other { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 4px; padding: 5px; }
+
+      #bollywood { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 4px; padding: 5px; }
+
+      #hollywood { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 4px; padding: 5px; }
+
+      #south { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 4px; padding: 5px; }
+
+.active{background:red}
+.fix{visibility:hidden}
+.fixed{background:gold;position:fixed}
+.tab-pane{overflow: hidden;
+  border: 1px solid #fff;
+  background-color: #f1f1f1;align:center;vertical-align:middle;vertical-align:middle;align:center;align-items:center;vertical-align:middle;horizontal-align:middle;} 
+  
+ .tab-content{background:SeaShell;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-top: 8px;  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 14px;
+
+  transition: 0.3s;
+  font-size: 9px;align:center;vertical-align:middle;vertical-align:middle;align:center;align-items:center;vertical-align:middle;horizontal-align:middle;width:100%!important }
+        :root {
+            --primary-bg: #141414;
+            --secondary-bg:#1F1F1F;
+            --text-primary: #FFFFFF;
+            --text-secondary: #AAAAAA;
+            --accent-color: #E50914;
+        }
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 17px 0px 40px 0px; /* Header height increased */
+        }
+        
+  
+     a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none;} 
+        
+     .content { padding: 8px; }
+        .loading-placeholder { color: var(--text-secondary); text-align: center; padding: 9px; }
+        
+        .category-section { margin-bottom: 12px; }
+        .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; }
+        .category-header h2 { font-size: 1.2rem; margin: 0; background:#000}
+        .card-carousel { display: flex; gap: 3px; overflow-x: auto; padding-bottom: 12px; scrollbar-width: none; }
+        .card-carousel::-webkit-scrollbar { display: none; }
+        .full-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 3px; }
+        .channel-card { width: 100%; cursor: pointer; text-decoration: none; color: var(--text-primary); display: block; }
+        .channel-card img { width: 95%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 2px;border :1px solid#ccc; background-color: var(--secondary-bg); pointer-events: none; }
+        .card-title { font-size: 0.7rem; margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; display: flex; justify-content: space-around; align-items: center; background-color: var(--secondary-bg); padding: 10px 0; z-index: 100; box-shadow: 0 -2px 5px rgba(0,0,0,0.3); }
+        .nav-item{display: flex; flex-direction: column; align-items: center; color: var(--text-secondary); text-decoration: none; font-size: 0.7rem; background: none; border: none; cursor: pointer; }
+ 
+        .nav-item.active { color: var(--text-primary); }
+        .nav-item svg { width: 24px; height: 24px; margin-bottom: 4px; stroke-width: 2; fill: none; stroke: currentColor; }
+        .nav-item.active svg { stroke: var(--accent-color); }
+        .page { display: none; }
+        .page.active { display: block; }
+  
+ 
+
+        .telegram-btn {position: fixed;
+            background-color: gold;
+            border:3px solid gold; 
+            padding: 2px 2px;
+            
+            text-decoration: none;
+            
+            transition: all 0.2s ease;
+            
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            white-space: nowrap;
+            width: 100%;
+            flex-shrink: 0;top:0px
+        }
+.telegram-btn1 {
+            background-color:red;
+            color: white;
+            padding: 2px 2px;
+            border-radius: 0px;
+            text-decoration: none;
+            font-weight: 900;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            white-space: nowrap;
+            
+            flex-shrink: 0;
+        }
+.telegram-btn2 {
+            background-color: green;
+            color:white;
+            padding: 2px 2px;
+            border-radius: 0px;
+            text-decoration: none;
+            font-weight: 900;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            white-space: nowrap;
+            
+            flex-shrink: 0;
+        }
+        .group-filter {background:;padding:2px;
+            margin-bottom: 1px;
+            text-align: center;
+        }
+        .group-filter select, .search-bar input {
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 15px;
+            border: 0px solid #A8E4A0;
+            background-color: #fff;
+            color: #333;
+        }
+        .search-bar {padding:4px;
+            text-align: center;
+            margin-bottom: 2px;border: 0px solid #A8E4A0;
+        }
+    
+
+       .text2 { padding:4px;
+  background-color: #1F1F1F;
+  color: white;align:center;margin-left:5px;font-size:9px
+}
+
+
+
+
+
+  
+    .pagination { background:gold;text-align: center; margin: 0px; width:100%}
+    .pagination button { background: green; border: none; padding: 10px 20px; margin: 3px 5px; cursor: pointer; border-radius: 6px; font-weight: bold; color: #fff; }
+  
+
+
+a:link, a:visited {color: white;
+  
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  color: black;
+}
+    
+        :root {
+            --bg-dark: #121212;
+            --bg-medium: #1E1E1E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --telegram-primary: #0088cc;
+            --telegram-hover: #0370a7;
+            --transition-speed: 0.3s;
+        }
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {align:center;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 10px;
+            width: 100%;
+        }
+
+        
+    input, select { padding: 10px; border-radius: 6px; font-size: 16px; border: none; outline: none; }
+
+   
+    
+    body { font-family: &quot;Segoe UI&quot;, sans-serif; background: #121212; color: #fff; margin: 0; }
+    .channel { background: #1f1f1f; border-radius: 6px; box-shadow: 0 2px 2px rgba(0, 255, 200, 0.05); overflow: hidden; cursor: pointer; text-align: center; padding: 5px; transition: 0.3s; }
+    .channel:hover { background: #292929; transform: translateY(-4px); box-shadow: 0 6px 5px rgba(0, 255, 200, 0.1); }
+    .channel img { width: 100%; height: 100px;  background: #2a2a2a; border-radius: 1px; padding: 6px; }
+    .channel h3 { font-size: 10px; margin: 10px 0 4px; color: #fff; word-break: break-word; }
+    .channel small { color: #aaa; font-size: 10px; }
+    
+    
+
+
+
+
+
+
+&lt;/style&gt;
+&lt;/head&gt;
+  &lt;table class=&quot;telegram-btn&quot;&gt;&lt;tr&gt;&lt;td class=&quot;telegram-btn1&quot; width=&quot;50%&quot;&gt;&lt;a href=&quot;https://t.me/filmymad&quot;&gt;FILMYMAD &lt;/a&gt;&lt;/td&gt;&lt;td class=&quot;telegram-btn2&quot; width=&quot;50%&quot;&gt;&lt;a href=&quot;https://t.me/filmymad&quot;&gt;FILMYMAD &lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+ 
+        
+
+&lt;main class=&quot;content&quot;&gt;
+   &lt;!-- Home Page --&gt;
+
+
+    &lt;div id=&quot;home-page&quot; class=&quot;page active&quot;&gt;
+
+ 
+    &lt;div id=&quot;home-categories-container&quot;&gt;
+     &lt;div id=&quot;all-channels-container&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;tab-content&quot;&gt;
+  &lt;div class=&quot;tab-pane&quot;&gt;
+&lt;div class=&quot;group-filter&quot;&gt;
+&lt;div class=&quot;search-bar&quot;&gt;
+
+  &lt;div class=&quot;topbar&quot;&gt;
+   &lt;input type=&quot;text&quot; id=&quot;searchInputb&quot; placeholder=&quot;Search Movie...&quot;&gt; &lt;select id=&quot;bollywoodtv&quot;&gt; &lt;option value=&quot;&quot;&gt;BOLLYWOOD&lt;/option&gt; &lt;/select&gt;
+   
+   &lt;/div&gt;&lt;/div&gt;
+
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div id=&quot;bollywood&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;pagination&quot;&gt;
+   &lt;button onclick=&quot;prevPageb()&quot;&gt;Prev&lt;/button&gt;
+   &lt;span id=&quot;pageInfo&quot;&gt;&lt;/span&gt;
+   &lt;button onclick=&quot;nextPageb()&quot;&gt;Next&lt;/button&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  
+  
+ &lt;script src=&quot;https://filmymad.neocities.org/Bollywood.txt&quot;&gt;
+&lt;/script&gt;
+  
+&lt;script&gt;
+let currentPageb = 1;
+const perPageb = 9;
+let favoritesb = JSON.parse(localStorage.getItem(&quot;favoritesb&quot;) || &quot;[]&quot;);
+
+
+
+function renderChannelsb() {
+  const search = document.getElementById('searchInputb').value.toLowerCase();
+  const category = document.getElementById('bollywoodtv').value;
+  let filtered =bollywood.filter(ch =&gt;
+    ch.name.toLowerCase().includes(search) &amp;&amp;
+    (category === '' || ch.group === category)
+  );
+
+  const totalPages = Math.ceil(filtered.length / perPageb);
+  if (currentPageb &gt; totalPages) currentPageb = totalPages;
+  if (currentPageb &lt; 1) currentPageb = 1;
+
+  const start = (currentPageb - 1) * perPageb;
+  const channels = filtered.slice(start, start + perPageb);
+
+  document.getElementById('bollywood').innerHTML = channels.map(ch =&gt; {
+    const isFav = favoritesb.includes(ch.name);
+    return `
+  &lt;div class=&quot;channel&quot;&gt;&lt;a href=&quot;https://www.livereacting.com/tools/mp4-player-embed?url=${ch.url}&quot; &gt;&lt;img src=&quot;${ch.logo}&quot; onerror=&quot;this.onerror=null;this.src='https://i.ibb.co/DPd27cCK/photo-2024-12-29-23-10-30.jpg';&quot;&gt;&lt;/a&gt;&lt;a href=&quot;${ch.url}&quot;&gt;
+   &lt;h3&gt;${ch.name}&lt;/h3&gt;&lt;/a&gt;&lt;/div&gt;
+    `;
+  }).join(&quot;&quot;);
+
+  document.getElementById('pageInfo').innerText = `Page ${currentPageb} of ${totalPages}`;
+}
+
+
+function toggleFav(e, name) {
+  e.stopPropagation();
+  if (favoritesb.includes(name)) {
+    favoritesb = favoritesb.filter(f =&gt; f !== name);
+  } else {
+    favoritesb.push(name);
+  }
+  localStorage.setItem(&quot;favoritesb&quot;, JSON.stringify(favoritesb));
+  renderChannelsb();
+}
+
+function nextPageb() { currentPageb++; renderChannelsb(); }
+function prevPageb() { currentPageb--; renderChannelsb(); }
+
+document.getElementById('searchInputb').addEventListener('input', renderChannelsb);
+document.getElementById('bollywoodtv').addEventListener('change', renderChannelsb);
+
+renderChannelsb();
+&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+
+
+    
+
+&lt;div id=&quot;BOLLYWOOD&quot; class=&quot;text2&quot;&gt;
+
+This site is not affiliated with any movies. All content is copyright of their respective owners. We cannot accept any responsibility for the content on this site. We cannot control or influence any audiovisual content on this site. All links provided on this site are indexed from third-party websites. We do not host any content &lt;/b&gt;
+contact:1filmymad@gmail.com
+
+&lt;/div&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;!-- Live TV Page --&gt;
+   &lt;div id=&quot;live-page&quot; class=&quot;page&quot;&gt;
+    &lt;div class=&quot;subscription-container&quot;&gt;
+ &lt;div class=&quot;tab-content&quot;&gt;
+  &lt;div class=&quot;tab-pane&quot;&gt;
+&lt;div class=&quot;group-filter&quot;&gt;
+&lt;div class=&quot;search-bar&quot;&gt;
+
+  &lt;div class=&quot;topbar&quot;&gt;
+   &lt;input type=&quot;text&quot; id=&quot;searchInputs&quot; placeholder=&quot;Search Movie...&quot;&gt; &lt;select id=&quot;southtv&quot;&gt; &lt;option value=&quot;&quot;&gt;SOUTH DUBBED&lt;/option&gt; &lt;/select&gt;
+   
+   &lt;/div&gt;&lt;/div&gt;
+
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div id=&quot;south&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;pagination&quot;&gt;
+   &lt;button onclick=&quot;prevPagess()&quot;&gt;Prev&lt;/button&gt;
+   &lt;span id=&quot;pageInfos&quot;&gt;&lt;/span&gt;
+   &lt;button onclick=&quot;nextPagess()&quot;&gt;Next&lt;/button&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  
+  
+ &lt;script src=&quot;https://filmymad.neocities.org/South.txt&quot;&gt;
+&lt;/script&gt;
+  
+&lt;script&gt;
+let currentPages = 1;
+const perPages = 9;
+let favoritess = JSON.parse(localStorage.getItem(&quot;favoritess&quot;) || &quot;[]&quot;);
+
+
+
+function renderChannelss() {
+  const search = document.getElementById('searchInputs').value.toLowerCase();
+  const category = document.getElementById('southtv').value;
+  let filtered =south.filter(ch =&gt;
+    ch.name.toLowerCase().includes(search) &amp;&amp;
+    (category === '' || ch.group === category)
+  );
+
+  const totalPages = Math.ceil(filtered.length / perPages);
+  if (currentPages &gt; totalPages) currentPages = totalPages;
+  if (currentPages &lt; 1) currentPages = 1;
+
+  const start = (currentPages - 1) * perPages;
+  const channels = filtered.slice(start, start + perPages);
+
+  document.getElementById('south').innerHTML = channels.map(ch =&gt; {
+    const isFav = favoritess.includes(ch.name);
+    return `
+        &lt;div class=&quot;channel&quot;&gt;&lt;a href=&quot;https://www.livereacting.com/tools/mp4-player-embed?url=${ch.url}&quot; &gt;&lt;img src=&quot;${ch.logo}&quot; onerror=&quot;this.onerror=null;this.src='https://i.ibb.co/DPd27cCK/photo-2024-12-29-23-10-30.jpg';&quot;&gt;&lt;/a&gt;&lt;a href=&quot;${ch.url}&quot;&gt;
+   &lt;h3&gt;${ch.name}&lt;/h3&gt;&lt;/a&gt;&lt;/div&gt;
+ 
+    `;
+  }).join(&quot;&quot;);
+
+  document.getElementById('pageInfos').innerText = `Page ${currentPages} of ${totalPages}`;
+}
+
+
+
+function toggleFav(e, name) {
+  e.stopPropagation();
+  if (favoritess.includes(name)) {
+    favoritess = favoritess.filter(f =&gt; f !== name);
+  } else {
+    favoritess.push(name);
+  }
+  localStorage.setItem(&quot;favoritess&quot;, JSON.stringify(favoritess));
+  renderChannelss();
+}
+
+function nextPagess() { currentPages++; renderChannelss(); }
+function prevPagess() { currentPages--; renderChannelss(); }
+
+document.getElementById('searchInputs').addEventListener('input', renderChannelss);
+document.getElementById('southtv').addEventListener('change', renderChannelss);
+
+renderChannelss();
+&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+
+
+
+
+
+
+&lt;div id=&quot;SOUTH HINDI&quot; class=&quot;text2&quot;&gt;
+
+This site is not affiliated with any movies. All content is copyright of their respective owners. We cannot accept any responsibility for the content on this site. We cannot control or influence any audiovisual content on this site. All links provided on this site are indexed from third-party websites. We do not host any content &lt;/b&gt;
+contact:1filmymad@gmail.com
+
+&lt;/div&gt;
+&lt;/div&gt;
+   &lt;/div&gt;
+
+
+
+
+&lt;div id=&quot;match-page&quot; class=&quot;page&quot;&gt;
+    &lt;div class=&quot;subscription-container&quot;&gt;
+    
+
+
+                          
+&lt;div class=&quot;tab-content&quot;&gt;
+  &lt;div class=&quot;tab-pane&quot;&gt;
+&lt;div class=&quot;group-filter&quot;&gt;
+&lt;div class=&quot;search-bar&quot;&gt;
+
+  &lt;div class=&quot;topbar&quot;&gt;
+   &lt;input type=&quot;text&quot; id=&quot;searchInputh&quot; placeholder=&quot;Search Movie...&quot;&gt; &lt;select id=&quot;hollywoodtv&quot;&gt; &lt;option value=&quot;&quot;&gt;HOLLYWOOD &lt;/option&gt; &lt;/select&gt;
+   
+   &lt;/div&gt;&lt;/div&gt;
+
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div id=&quot;hollywood&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;pagination&quot;&gt;
+   &lt;button onclick=&quot;prevPageh()&quot;&gt;Prev&lt;/button&gt;
+   &lt;span id=&quot;pageInfoh&quot;&gt;&lt;/span&gt;
+   &lt;button onclick=&quot;nextPageh()&quot;&gt;Next&lt;/button&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  
+  
+ &lt;script src=&quot;https://filmymad.neocities.org/Hollywood.txt&quot;&gt;
+&lt;/script&gt;
+
+
+
+  
+  
+&lt;script&gt;
+let currentPageh = 1;
+const perPageh = 9;
+let favoritesh = JSON.parse(localStorage.getItem(&quot;favoritesh&quot;) || &quot;[]&quot;);
+
+
+
+function renderChannelsh() {
+  const search = document.getElementById('searchInputh').value.toLowerCase();
+  const category = document.getElementById('hollywoodtv').value;
+  let filtered =hollywood.filter(ch =&gt;
+    ch.name.toLowerCase().includes(search) &amp;&amp;
+    (category === '' || ch.group === category)
+  );
+
+  const totalPages = Math.ceil(filtered.length / perPageh);
+  if (currentPageh &gt; totalPages) currentPageh = totalPages;
+  if (currentPageh &lt; 1) currentPageh = 1;
+
+  const start = (currentPageh - 1) * perPageh;
+  const channels = filtered.slice(start, start + perPageh);
+
+  document.getElementById('hollywood').innerHTML = channels.map(ch =&gt; {
+    const isFav = favoritesh.includes(ch.name);
+    return `
+  &lt;div class=&quot;channel&quot;&gt;&lt;a href=&quot;https://www.livereacting.com/tools/mp4-player-embed?url=${ch.url}&quot; &gt;&lt;img src=&quot;${ch.logo}&quot; onerror=&quot;this.onerror=null;this.src='https://i.ibb.co/DPd27cCK/photo-2024-12-29-23-10-30.jpg';&quot;&gt;&lt;/a&gt;&lt;a href=&quot;${ch.url}&quot;&gt;
+   &lt;h3&gt;${ch.name}&lt;/h3&gt;&lt;/a&gt;&lt;/div&gt;
+ 
+    `;
+  }).join(&quot;&quot;);
+
+  document.getElementById('pageInfoh').innerText = `Page ${currentPageh} of ${totalPages}`;
+}
+
+
+
+
+function toggleFav(e, name) {
+  e.stopPropagation();
+  if (favoritesh.includes(name)) {
+    favoritesh = favoritesh.filter(f =&gt; f !== name);
+  } else {
+    favoritesh.push(name);
+  }
+  localStorage.setItem(&quot;favoritesh&quot;, JSON.stringify(favoritesh));
+  renderChannelsh();
+}
+
+function nextPageh() { currentPageh++; renderChannelsh(); }
+function prevPageh() { currentPageh--; renderChannelsh(); }
+
+document.getElementById('searchInputh').addEventListener('input', renderChannelsh);
+document.getElementById('hollywoodtv').addEventListener('change', renderChannelsh);
+
+renderChannelsh();
+&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+
+
+&lt;div id=&quot;HOLLYWOOD&quot; class=&quot;text2&quot;&gt;
+
+This site is not affiliated with any movies. All content is copyright of their respective owners. We cannot accept any responsibility for the content on this site. We cannot control or influence any audiovisual content on this site. All links provided on this site are indexed from third-party websites. We do not host any content &lt;/b&gt;
+contact:1filmymad@gmail.com
+
+
+
+&lt;/div&gt;
+
+
+    &lt;/div&gt;
+   &lt;/div&gt;
+
+  
+   &lt;div id=&quot;subscription-page&quot; class=&quot;page&quot;&gt;
+    &lt;div class=&quot;subscription-container&quot;&gt;
+&lt;div class=&quot;tab-content&quot;&gt;
+  &lt;div class=&quot;tab-pane&quot;&gt;
+&lt;div class=&quot;group-filter&quot;&gt;
+&lt;div class=&quot;search-bar&quot;&gt;
+
+  &lt;div class=&quot;topbar&quot;&gt;
+   &lt;input type=&quot;text&quot; id=&quot;searchInputo&quot; placeholder=&quot;Search Movie...&quot;&gt; &lt;select id=&quot;othertv&quot;&gt; &lt;option value=&quot;&quot;&gt;OTHER FILM&lt;/option&gt; &lt;/select&gt;
+   
+   &lt;/div&gt;&lt;/div&gt;
+
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div id=&quot;other&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;pagination&quot;&gt;
+   &lt;button onclick=&quot;prevPageo()&quot;&gt;Prev&lt;/button&gt;
+   &lt;span id=&quot;pageInfoo&quot;&gt;&lt;/span&gt;
+   &lt;button onclick=&quot;nextPageo()&quot;&gt;Next&lt;/button&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  
+  
+ &lt;script src=&quot;https://filmymad.neocities.org/Other.txt&quot;&gt;
+&lt;/script&gt;
+  
+&lt;script&gt;
+let currentPageo = 1;
+const perPageo = 9;
+let favoriteso = JSON.parse(localStorage.getItem(&quot;favoriteso&quot;) || &quot;[]&quot;);
+
+
+
+function renderChannelso() {
+  const search = document.getElementById('searchInputo').value.toLowerCase();
+  const category = document.getElementById('othertv').value;
+  let filtered =other.filter(ch =&gt;
+    ch.name.toLowerCase().includes(search) &amp;&amp;
+    (category === '' || ch.group === category)
+  );
+
+  const totalPages = Math.ceil(filtered.length / perPageo);
+  if (currentPageo &gt; totalPages) currentPageo = totalPages;
+  if (currentPageo &lt; 1) currentPageo = 1;
+
+  const start = (currentPageo - 1) * perPageo;
+  const channels = filtered.slice(start, start + perPageo);
+
+  document.getElementById('other').innerHTML = channels.map(ch =&gt; {
+    const isFav = favoriteso.includes(ch.name);
+    return `
+       &lt;div class=&quot;channel&quot;&gt;&lt;a href=&quot;https://www.livereacting.com/tools/mp4-player-embed?url=${ch.url}&quot; &gt;&lt;img src=&quot;${ch.logo}&quot; onerror=&quot;this.onerror=null;this.src='https://i.ibb.co/DPd27cCK/photo-2024-12-29-23-10-30.jpg';&quot;&gt;&lt;/a&gt;&lt;a href=&quot;${ch.url}&quot;&gt;
+   &lt;h3&gt;${ch.name}&lt;/h3&gt;&lt;/a&gt;&lt;/div&gt;
+ 
+    `;
+  }).join(&quot;&quot;);
+
+  document.getElementById('pageInfoo').innerText = `Page ${currentPageo} of ${totalPages}`;
+}
+
+
+
+function toggleFav(e, name) {
+  e.stopPropagation();
+  if (favoriteso.includes(name)) {
+    favoriteso = favoriteso.filter(f =&gt; f !== name);
+  } else {
+    favoriteso.push(name);
+  }
+  localStorage.setItem(&quot;favoriteso&quot;, JSON.stringify(favoriteso));
+  renderChannelso();
+}
+
+function nextPageo() { currentPageo++; renderChannelso(); }
+function prevPageo() { currentPageo--; renderChannelso(); }
+
+document.getElementById('searchInputo').addEventListener('input', renderChannelso);
+document.getElementById('othertv').addEventListener('change', renderChannelso);
+
+renderChannelso();
+&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+
+
+&lt;div id=&quot;OTHER&quot; class=&quot;text2&quot;&gt;
+
+This site is not affiliated with any movies. All content is copyright of their respective owners. We cannot accept any responsibility for the content on this site. We cannot control or influence any audiovisual content on this site. All links provided on this site are indexed from third-party websites. We do not host any content &lt;/b&gt;
+contact:1filmymad@gmail.com
+
+
+&lt;/div&gt;
+
+&lt;/div&gt; &lt;/div&gt;
+    
+
+
+  &lt;/main&gt;
+
+
+
+
+
+
+
+  &lt;footer class=&quot;bottom-nav&quot;&gt;
+   &lt;button class=&quot;nav-item nav-link active&quot; data-page=&quot;home-page&quot; data-title=&quot;bollywood&quot;&gt;
+&lt;svg width=&quot;800px&quot; height=&quot;800px&quot; viewBox=&quot;-3 0 32 32&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+&lt;g id=&quot;icomoon-ignore&quot;&gt;
+&lt;/g&gt;
+&lt;path d=&quot;M0 4.985v22.029h26.226v-22.029h-26.226zM4.196 25.966h-3.147v-4.196h3.147v4.196zM4.196 20.721h-3.147v-4.196h3.147v4.196zM4.196 15.476h-3.147v-4.196h3.147v4.196zM4.196 10.231h-3.147v-4.196h3.147v4.196zM20.98 11.979v13.987h-15.735v-19.931h15.735v5.944zM25.177 25.966h-3.147v-4.196h3.147v4.196zM25.177 20.721h-3.147v-4.196h3.147v4.196zM25.177 15.476h-3.147v-4.196h3.147v4.196zM25.177 10.231h-3.147v-4.196h3.147v4.196z&quot; fill=&quot;#000000&quot;&gt;
+
+&lt;/path&gt;
+&lt;path d=&quot;M10.49 11.76v8.479l7.343-4.239-7.343-4.24zM11.539 13.577l4.196 2.423-4.196 2.423v-4.845z&quot; fill=&quot;#000000&quot;&gt;
+
+&lt;/path&gt;
+&lt;/svg&gt;
+    &lt;span&gt;BOLLYWOOD&lt;/span&gt;
+   &lt;/button&gt;
+
+
+
+
+   &lt;button class=&quot;nav-item nav-link&quot; data-page=&quot;live-page&quot; data-title=&quot;south&quot;&gt;
+&lt;svg fill=&quot;#000000&quot; width=&quot;800px&quot; height=&quot;800px&quot; viewBox=&quot;0 0 36 36&quot; version=&quot;1.1&quot;  preserveAspectRatio=&quot;xMidYMid meet&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+    &lt;title&gt;film-strip-line&lt;/title&gt;
+    &lt;path class=&quot;clr-i-outline clr-i-outline-path-1&quot; d=&quot;M30,4H6A2,2,0,0,0,4,6V30a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V6A2,2,0,0,0,30,4Zm0,26H6V6H30Z&quot;&gt;&lt;/path&gt;&lt;path class=&quot;clr-i-outline clr-i-outline-path-2&quot; d=&quot;M14.6,23.07a1.29,1.29,0,0,0,1.24.09l8.73-4a1.3,1.3,0,0,0,0-2.37h0l-8.73-4A1.3,1.3,0,0,0,14,14v8A1.29,1.29,0,0,0,14.6,23.07Zm1-8.6L23.31,18,15.6,21.51Z&quot;&gt;&lt;/path&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-3&quot; x=&quot;8&quot; y=&quot;7&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-4&quot; x=&quot;14&quot; y=&quot;7&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-5&quot; x=&quot;20&quot; y=&quot;7&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-6&quot; x=&quot;26&quot; y=&quot;7&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-7&quot; x=&quot;8&quot; y=&quot;26&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-8&quot; x=&quot;14&quot; y=&quot;26&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-9&quot; x=&quot;20&quot; y=&quot;26&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;&lt;rect class=&quot;clr-i-outline clr-i-outline-path-10&quot; x=&quot;26&quot; y=&quot;26&quot; width=&quot;2&quot; height=&quot;3&quot;&gt;&lt;/rect&gt;
+    &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;36&quot; height=&quot;36&quot; fill-opacity=&quot;0&quot;/&gt;
+&lt;/svg&gt;
+    &lt;span&gt;SOUTH HINDI&lt;/span&gt;
+   &lt;/button&gt;
+
+
+
+
+   &lt;button class=&quot;nav-item nav-link&quot; data-page=&quot;match-page&quot; data-title=&quot;Hollywood&quot;&gt;
+&lt;svg version=&quot;1.1&quot; id=&quot;Uploaded to svgrepo.com&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; 
+	 width=&quot;800px&quot; height=&quot;800px&quot; viewBox=&quot;0 0 32 32&quot; xml:space=&quot;preserve&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+	.linesandangles_een{fill:#111918;}
+&lt;/style&gt;
+&lt;path class=&quot;linesandangles_een&quot; d=&quot;M4,4v24h24V4H4z M20,6v5h-8V6H20z M12,13h8v6h-8V13z M6,26V6h4v20H6z M12,26v-5h8v5H12z M26,26
+	h-4V6h4V26z M25,9h-2V7h2V9z M25,13h-2v-2h2V13z M25,17h-2v-2h2V17z M25,21h-2v-2h2V21z M23,25v-2h2v2H23z M9,7v2H7V7H9z M7,11h2v2
+	H7V11z M7,15h2v2H7V15z M7,19h2v2H7V19z M7,23h2v2H7V23z&quot;/&gt;
+&lt;/svg&gt;
+    &lt;span&gt;HOLLYWOOD&lt;/span&gt;
+   &lt;/button&gt;
+
+
+
+   &lt;button class=&quot;nav-item nav-link&quot; data-page=&quot;subscription-page&quot; data-title=&quot;Other&quot;&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polygon points=&quot;5 3 19 12 5 21 5 3&quot;/&gt;&lt;/svg&gt;
+    &lt;span&gt;OTHER&lt;/span&gt;
+   &lt;/button&gt;
+
+
+   &lt;/footer&gt;
+
+
+
+  &lt;script&gt;
+    document.addEventListener('DOMContentLoaded', () =&gt; {
+        
+        const playlistUrl = 'https://raw.githubusercontent.com/Shubhamkur/Tv/refs/heads/main/tvm3u';
+        
+
+        const pages = document.querySelectorAll('.page');
+        const headerTitle = document.getElementById('header-title');
+        const bannerCarousel = document.getElementById('banner-carousel');
+        const homeCategoriesContainer = document.getElementById('home-categories-container');
+        const allChannelsContainer = document.getElementById('all-channels-container');
+        const searchInput = document.getElementById('search-input');
+
+        function parseM3U(data) {
+            if (!data || !data.trim().startsWith('#EXTM3U')) return [];
+            const lines = data.trim().split('\n');
+            const channels = [];
+            for (let i = 0; i &lt; lines.length; i++) {
+                if (lines[i].trim().startsWith('#EXTINF:')) {
+                    let streamUrl = lines[i + 1] ? lines[i + 1].trim() : '';
+                    if (!streamUrl || streamUrl.startsWith('#')) continue;
+                    
+                    const info = lines[i].trim();
+                    const nameMatch = info.match(/tvg-name=&quot;([^&quot;]*)&quot;/) || info.match(/,(.*)$/);
+                                    const idMatch = info.match(/tvg-id=&quot;([^&quot;]*)&quot;/);
+
+                    const logoMatch = info.match(/tvg-logo=&quot;([^&quot;]*)&quot;/);
+                    const groupMatch = info.match(/group-title=&quot;([^&quot;]*)&quot;/);
+                    
+                    channels.push({
+                        name: nameMatch ? nameMatch[1].trim() : 'Unnamed',
+                        logo: logoMatch ? logoMatch[1].trim() : 'https://placehold.co/280x160/1F1F1F/ffffff?text=No+Logo',
+                        streamUrl: streamUrl,
+                                         id: idMatch ? idMatch[1].trim() : 'no', 
+
+                        group: groupMatch ? groupMatch[1].trim() : 'General'
+                    });
+                    i++;
+                }
+            }
+            return channels;
+        }
+
+        function renderChannels(channels, container, isCarousel) {
+            const cardHtml = channels.map(channel =&gt; {
+                const playerUrl = `https://tv4wap.github.io/p2?url=${encodeURIComponent(channel.streamUrl)}`;
+
+                return `
+     &lt;a href=&quot;${playerUrl}&quot; class=&quot;channel-card&quot; style=&quot;${isCarousel ? 'flex: 0 0 140px; width: 140px;' : ''}&quot;&gt;
+                    &lt;img src=&quot;${channel.logo}&quot; alt=&quot;${channel.name}&quot; loading=&quot;lazy&quot; onerror=&quot;this.onerror=null;this.src='https://placehold.co/280x160/1F1F1F/ffffff?text=No+Logo';&quot;&gt;
+                    &lt;div class=&quot;card-title&quot;&gt;${channel.name}&lt;/div&gt;
+                &lt;/a&gt;`;
+            }).join('');
+            container.innerHTML = cardHtml || '&lt;div class=&quot;loading-placeholder&quot;&gt;No channels found.&lt;/div&gt;';
+        }
+        
+        function renderBanners(sliders) {
+            if (!sliders || sliders.length === 0) return;
+            bannerCarousel.innerHTML = sliders.map((slide, index) =&gt; `
+                &lt;div class=&quot;banner-slide ${index === 0 ? 'active' : ''}&quot; style=&quot;background-image: url('${slide.imageUrl}');&quot;&gt;
+                    &lt;div class=&quot;banner-title-container&quot;&gt;&lt;div class=&quot;banner-title&quot;&gt;${slide.title}&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;`).join('');
+            let currentSlide = 0;
+            const slides = bannerCarousel.querySelectorAll('.banner-slide');
+            if (slides.length &gt; 1) {
+                setInterval(() =&gt; {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, 5000);
+            }
+        }
+
+        async function loadInitialData() {
+            
+            try {
+                const response = await fetch(playlistUrl);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const m3uText = await response.text();
+                const allChannelsData = parseM3U(m3uText);
+
+                if (allChannelsData.length === 0) throw new Error('No channels found.');
+                
+                // Logic to preserve playlist order
+                const groupedChannels = {};
+                const groupOrder = [];
+
+
+
+
+                allChannelsData.forEach(channel =&gt; {
+                    const group = channel.group || 'General';
+
+                    
+                    if (!groupedChannels[group]) {
+                        groupedChannels[group] = [];
+                        groupOrder.push(group); // Add group to the order array only when it's first seen
+                    }
+                    groupedChannels[group].push(channel);
+                });
+
+                homeCategoriesContainer.innerHTML = ''; 
+                allChannelsContainer.innerHTML = '';
+                
+                // Render categories based on the original playlist order
+                groupOrder.forEach(groupName =&gt; {
+                    const channels = groupedChannels[groupName];
+                    
+                    const homeSection = document.createElement('section');
+                    homeSection.className = 'category-section';
+                    homeSection.innerHTML = `&lt;div class=&quot;category-header&quot;&gt;&lt;h2&gt;${groupName}&lt;/h2&gt;&lt;/div&gt;&lt;div class=&quot;card-carousel&quot;&gt;&lt;/div&gt;`;
+                    homeCategoriesContainer.appendChild(homeSection);
+                    renderChannels(channels, homeSection.querySelector('.card-carousel'), true);
+                    
+                    const liveSection = document.createElement('section');
+                    liveSection.className = 'category-section';
+                    liveSection.innerHTML = `&lt;div  class=&quot;category-header&quot;&gt;&lt;h2&gt;${groupName}&lt;/h2&gt;&lt;/div&gt;&lt;div class=&quot;full-grid&quot;&gt;&lt;/div&gt;`;
+                    allChannelsContainer.appendChild(liveSection);
+                    renderChannels(channels, liveSection.querySelector('.full-grid'), false);
+                });
+                
+
+
+            } catch (error) {
+                console.error('Failed to load channels:', error);
+                const errorMessage = `&lt;p class=&quot;loading-placeholder&quot;&gt;Could not load channels. &lt;br&gt; ${error.message}&lt;/p&gt;`;
+                homeCategoriesContainer.innerHTML = errorMessage;
+                allChannelsContainer.innerHTML = errorMessage;
+            }
+        }
+
+        
+        
+                
+        function switchPage(pageId, title) {
+            pages.forEach(page =&gt; page.classList.remove('active'));
+            document.getElementById(pageId)?.classList.add('active');
+            
+            document.querySelectorAll('.nav-item.nav-link').forEach(link =&gt; {
+                link.classList.toggle('active', link.dataset.page === pageId);
+            });
+            headerTitle.textContent = title;
+            const isSubPage = pageId === 'subscription-page';
+            headerTitle.classList.toggle('active', !isSubPage);
+            document.querySelector('.search-container').style.display = isSubPage ? 'none' : 'flex';
+            document.querySelector('.time-display').style.display = isSubPage ? 'none' : 'block';
+             if (isSubPage) {
+                document.querySelector('.header').style.gridTemplateColumns = 'auto 1fr auto';
+             }
+        }
+ function filterChannels() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const activePage = document.querySelector('.page.active');
+            if (!activePage) return;
+
+            activePage.querySelectorAll('.category-section').forEach(section =&gt; {
+                let categoryHasVisibleChannel = false;
+                section.querySelectorAll('.channel-card').forEach(card =&gt; {
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    const isMatch = title.includes(searchTerm);
+                    card.style.display = isMatch ? '' : 'none';
+                    if (isMatch) categoryHasVisibleChannel = true;
+                });
+                section.style.display = categoryHasVisibleChannel ? '' : 'none';
+            });
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link =&gt; {
+            if (link.dataset.page) {
+                link.addEventListener('click', (e) =&gt; {
+                    e.preventDefault();
+                    switchPage(link.dataset.page, link.dataset.title);
+                });
+            }
+        });
+
+        document.querySelector('main.content').addEventListener('click', (e) =&gt; {
+            const buyButton = e.target.closest('.buy-btn');
+            if(buyButton &amp;&amp; buyButton.dataset.link) {
+                window.location.href = buyButton.dataset.link;
+            }
+        });
+        
+
+
+searchInput.addEventListener('input', filterChannels);
+        
+        loadInitialData();
+        switchPage('home-page', 'Home');
+    });
+    &lt;/script&gt;
+
+
+
+
+
+
+
+
